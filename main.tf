@@ -15,6 +15,9 @@ resource "iterative_task" "gpu-runner" {
     workdir = "."
     output = ""
   }
+  environment = {
+    "REPO_TOKEN" = ""
+  }
   script = <<-END
     #!/bin/bash
     # setup project requirments
