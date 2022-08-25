@@ -13,7 +13,7 @@ resource "iterative_task" "gpu-runner" {
   permission_set = "arn:aws:iam::342840881361:instance-profile/tpi-vscode-example"
   storage {
     workdir = "."
-    output = ""
+    output = "."
   }
   environment = {
     "REPO_TOKEN" = ""
