@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-unset GITHUB_RUN_ID #bypass cml looping?
 
 export TF_LOG_PROVIDER=INFO
 terraform init
