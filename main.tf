@@ -30,10 +30,12 @@ resource "iterative_task" "gpu-runner" {
 
     pipenv install --skip-lock
     pipenv run dvc pull
-    pipenv run dvc repro
+    pipenv run dvc repro --force
 
     git status
-    which cml
+
+    # dont re-run
+    unset REPO_TOKEN
   END
   
 }
