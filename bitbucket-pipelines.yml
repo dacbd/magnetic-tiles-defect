@@ -9,3 +9,7 @@ pipelines:
           name: Run training
           script:
             - ./tpi-run.sh
+      - step:
+          name: Git status
+          script:
+            - git status
